@@ -1,5 +1,6 @@
 package com.bookclub.api.controller;
 
+import com.bookclub.api.common.ApiResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HealthController {
 
     @GetMapping
-    public String health() {
-        return "OK";
+    public ApiResponse<String> health() {
+        return ApiResponse.success("OK");
     }
 }
